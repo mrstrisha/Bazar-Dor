@@ -32,7 +32,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-6 flex flex-col justify-between gap-2 border-t border-green-200 pt-4 text-xs text-gray-500 sm:flex-row">
           <p>
-            © {new Date().getFullYear()} বাজারদর। সর্বস্বত্ব সংরক্ষিত।
+            © © 2026 বাজারদর। সর্বস্বত্ব সংরক্ষিত। 
           </p>
 
           <p>বাংলাদেশের বাজার, আপনার হাতেই। 🇧🇩</p>
