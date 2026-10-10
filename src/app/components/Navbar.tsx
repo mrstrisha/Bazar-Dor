@@ -1,10 +1,15 @@
+
 import Link from "next/link";
+
 interface Navs {
-  slug: string
-  title: string
-  topicId: string | null
-  url: string
-  scrapable: boolean
+  id: string;
+  slug: string;
+  nameBn: string;
+  icon: string;
+  title: string;
+  topicId: string | null;
+  url: string;
+  scrapable: boolean;
 }
 
 const Navbar = async () => {
@@ -13,20 +18,21 @@ const Navbar = async () => {
   );
 
   const navs: Navs[] = await res.json();
-    
-    return (
-        <div className="max-w-7xl mx-auto flex justify-start gap-4 pl-5">
-      
 
+  return (
+    <div className="max-w-7xl mx-auto flex justify-start gap-4 pl-5">
       {navs.map((n) => (
-        <Link key={n.id} href={`/category/${n.slug}`}  className="font-bold gap-2">
-         {n.icon}
+        <Link
+          key={n.id}
+          href={`/category/${n.slug}`}
+          className="font-bold gap-2"
+        >
+          {n.icon}
           {n.nameBn}
-         
         </Link>
       ))}
     </div>
-    );
+  );
 };
 
 export default Navbar;
