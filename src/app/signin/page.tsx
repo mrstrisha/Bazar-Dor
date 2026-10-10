@@ -6,7 +6,7 @@ import React from "react";
 import { toast } from "react-toastify";
 
 const SignInpage = () => {
-  const onSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
@@ -23,10 +23,10 @@ const SignInpage = () => {
       callbackURL: "/",
     });
 
-    if (data) {
-      toast.success("সফলভাবে সাইন ইন হয়েছে!");
-      redirect("/");
-    }
+  if (data) {
+  toast.success("সফলভাবে সাইন ইন হয়েছে!");
+ redirect("/");
+}
 
     if (error) {
       toast.error(error?.message || "সাইন ইন করতে সমস্যা হয়েছে!");
@@ -45,7 +45,10 @@ const SignInpage = () => {
     });
   };
 
+ 
+
   return (
+    
     <div className="min-h-screen bg-[#f8f9fa] flex flex-col justify-center items-center py-10 px-4 font-sans">
       {/* Header Section */}
       <div className="text-center mb-6">
