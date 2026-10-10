@@ -27,7 +27,7 @@ const UserButton = () => {
           />
         </div>
       </div>
-      <span>{user.name} ⬇️</span>
+      <span>{user.name} ▼</span>
     </div>
 
 <ul tabIndex={-1} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-sm">
