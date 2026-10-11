@@ -7,12 +7,12 @@ import Marquee from "./Marquee";
 import { Suspense } from "react";
 
 const Header = () => {
-// const today = new Intl.DateTimeFormat("bn-BD", {
-//   month: "long",
-//   day: "numeric",
-//   year: "numeric",
-//   timeZone: "Asia/Dhaka",
-// }).format(new Date());
+const today = new Intl.DateTimeFormat("bn-BD", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "Asia/Dhaka",
+}).format(new Date());
 
   return (
     <div className="w-full">
@@ -23,7 +23,7 @@ const Header = () => {
 
           <div>
             <h2 className="font-bold text-2xl">বাজার দর</h2>
-            {/* <p>{today}</p> */}
+            <p>{today}</p> 
           </div>
         </div>
 

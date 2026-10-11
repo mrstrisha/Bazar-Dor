@@ -30,9 +30,17 @@ interface HeroSectionProps {
 
 
 export default function Home({
+
  
   imageAlt = "Basket of fruits and vegetables",
 }: HeroSectionProps) {
+
+  const today = new Intl.DateTimeFormat("bn-BD", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "Asia/Dhaka",
+}).format(new Date());
   return (
     <div>
     <section className="w-full bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10 mt-3">
@@ -42,7 +50,7 @@ export default function Home({
         <div className="flex-1">
           {/* Date badge */}
           <div className="inline-block bg-green-100 text-green-700 text-sm font-medium px-4 py-1 rounded-full mb-4">
-            শনিবার, ৬ আষাঢ়, ২০২৬
+        <p>{today}</p>
           </div>
 
           {/* Main heading */}
@@ -68,7 +76,7 @@ export default function Home({
         <div className="flex-shrink-0">
          
 <Image
-  src="/bazar-Hero.png"
+  src="/bazar-hero.png"
   alt={imageAlt}
   width={288}
   height={288}
