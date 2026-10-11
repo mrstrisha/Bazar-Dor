@@ -14,6 +14,8 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductSections from "./components/ProductSection";
 
+import { Suspense } from "react";
+
 // Optional: image path কে type-safe রাখতে চাইলে
 interface HeroSectionProps {
   imageSrc?: string;
@@ -75,7 +77,9 @@ export default function Home({
         </div>
       </div>
     </section>
-      <ProductSections></ProductSections>
+     <Suspense fallback={<p className="p-4">পণ্যের তথ্য লোড হচ্ছে...</p>}>
+  <ProductSections />
+</Suspense>
     </div>
   );
 }
